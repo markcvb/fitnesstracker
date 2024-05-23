@@ -6,7 +6,7 @@ public class Workout {
     private ArrayList<int> sets;
  
  
-    public class Workout(ArrayList<Exercise> sequence, ArrayList<int> reps, ArrayList<int> sets) {
+    public class Workout(ArrayList<Exercise> sequence, ArrayList<Integer> reps, ArrayList<int> sets) {
         this.sequence = sequence;
         this.reps = reps;
         this.sets = sets;
