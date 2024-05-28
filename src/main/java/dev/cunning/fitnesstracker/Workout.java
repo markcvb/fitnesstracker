@@ -1,9 +1,11 @@
 package dev.cunning.fitnesstracker;
 
+import java.util.ArrayList;
+
 public class Workout {
     private ArrayList<Exercise> sequence;
-    private ArrayList<int> reps;
-    private ArrayList<int> sets;
+    private ArrayList<Integer> reps;
+    private ArrayList<Integer> sets;
 
 
     public Workout(ArrayList<Exercise> sequence, ArrayList<Integer> reps, ArrayList<Integer> sets) {
