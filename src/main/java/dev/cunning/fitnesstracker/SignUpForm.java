@@ -1,10 +1,9 @@
 package dev.cunning.fitnesstracker;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 public class SignUpForm extends Application{
@@ -37,9 +36,36 @@ public class SignUpForm extends Application{
         gridpane.add(passwordField, 1, 2);
         gridpane.add(signupButton, 1, 4);
 
+        signupButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                String username = usernameField.getText();
+                String email = emailField.getText();
+                String password = passwordField.getText();
+
+                if(username.equals("soonwoo")){
+                    showAlert(Alert.AlertType.ERROR, "SOONWOO YOU ARE SHIT AT VAL", "username: " + username);
+                }
+                if(username.equals("mark")){
+                    showAlert(Alert.AlertType.CONFIRMATION, "Works", "username: " + username);
+                }
+            }
+
+
+        });
+
         Scene scene = new Scene(gridpane, 400, 300);
         primaryStage.setScene(scene);
         primaryStage.show();
+
+
+    }
+
+    private void showAlert(Alert.AlertType alertType, String title, String message) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 
     public static void main(String[] args) {
