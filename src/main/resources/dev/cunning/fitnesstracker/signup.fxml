@@ -1,14 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="dev.cunning.fitnesstracker.Signup"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.cunning.fitnesstracker.signupController">
+    <children>
+        <AnchorPane prefHeight="400.0" prefWidth="323.0" style="-fx-background-color: #FFA500;">
+            <children>
+                <Label layoutX="18.0" layoutY="94.0" text="Fitness Tracker">
+                    <font>
+                        <Font name="Noto Serif Regular" size="30.0" />
+                    </font>
+                </Label>
+                <Label layoutX="58.0" layoutY="266.0" text="mark@cunning.dev">
+                    <font>
+                        <Font name="Noto Serif Regular" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="109.0" layoutY="288.0" text="Tyler">
+                    <font>
+                        <Font name="Noto Serif Regular" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="95.0" layoutY="310.0" text="Soonwoo">
+                    <font>
+                        <Font name="Noto Serif Regular" size="15.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="400.0" prefWidth="402.0">
+            <children>
+                <Label layoutX="20.0" layoutY="85.0" text="Username">
+                    <font>
+                        <Font name="Tahoma Bold" size="21.0" />
+                    </font>
+                </Label>
+                <Label layoutX="22.0" layoutY="146.0" text="Password">
+                    <font>
+                        <Font name="Tahoma Bold" size="21.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="usernameField" layoutX="146.0" layoutY="85.0" prefHeight="26.0" prefWidth="174.0" />
+                <TextField fx:id="passwordField" layoutX="146.0" layoutY="146.0" prefHeight="26.0" prefWidth="174.0" />
+            <Label layoutX="143.0" layoutY="191.0" text="Age">
+               <font>
+                  <Font name="Tahoma" size="32.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="zoomerRadio" layoutX="138.0" layoutY="238.0" mnemonicParsing="false" text="Zoomer" />
+            <RadioButton fx:id="boomerRadio" layoutX="138.0" layoutY="263.0" mnemonicParsing="false" text="Boomer" />
+            <Button fx:id="signupButton" layoutX="141.0" layoutY="296.0" mnemonicParsing="false" text="Sign Up" />
+            <Label layoutX="22.0" layoutY="341.0" text="Already a Member?">
+               <font>
+                  <Font name="Tahoma Bold" size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginButton" layoutX="233.0" layoutY="341.0" mnemonicParsing="false" text="Log In" />
+            </children>
+        </AnchorPane>
+    </children>
+</HBox>

@@ -9,6 +9,7 @@ module dev.cunning.fitnesstracker {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
 
+    requires java.sql;
 
     opens dev.cunning.fitnesstracker to javafx.fxml;
     exports dev.cunning.fitnesstracker;
